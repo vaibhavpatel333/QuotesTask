@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  max-width: 600px;
+}
+
+.form {
+  margin-bottom: 20px;
+  width: 3 00px;
+  height: 200px;
+  background-color: #555;
+}
+
+.quote-container {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  text-align: center;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.quote {
+  position: relative;
+  margin: 20px 0;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.quote:hover {
+  background-color: #f0f0f0;
+}
+
+.quote-text {
+  font-size: 18px;
+  font-style: italic;
+  margin: 0;
+  color: #777;
+}
+
+.quote-author {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 10px 0 0;
+  color: #333;
+}
+
+.quote-actions {
+  position: absolute;
+  top: 36px;
+  right: 10px;
+  display: none;
+}
+
+.quote:hover .quote-actions {
+  display: block;
+}
+
+.icon {
+  margin-left: 10px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #000;
+}
+
+.error {
+  color: red;
+}
+
+button {
+  padding: 7px;
+  background: #378d37;
+  color: white;
+  font-size: medium;
+  font-weight: 700;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+}
+.field {
+  margin: 10px;
+}
+
+ul {
+  text-align: left;
+}
