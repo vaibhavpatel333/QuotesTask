@@ -37,6 +37,7 @@ const Quote = () => {
       quoteText: quote.quoteText,
       id: quote._id,
     });
+    setFormError("")
   }, []);
 
   const handleDelete = useCallback(
