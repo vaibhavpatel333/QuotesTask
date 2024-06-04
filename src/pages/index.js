@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import "../App.css";
 import useQuoteApi from "../Hooks/quoteAPIHook";
-import {apiRoute} from "../helper";
+import { apiRoute } from "../helper";
 import { QuoteList } from "../component/QuoteList";
 
 const Quote = () => {
@@ -13,6 +13,8 @@ const Quote = () => {
     updateQuote,
     deleteQuote,
     formQuoteError,
+    setError,
+    setFormQuoteError,
   } = useQuoteApi(apiRoute("quotes"));
   const [formData, setFormData] = useState({
     quoteText: "",
@@ -59,6 +61,10 @@ const Quote = () => {
           } else {
             await createQuote(formData);
           }
+          setTimeout(() => {
+            setFormQuoteError(null);
+            setError(null);
+          }, 2000);
           setFormData({ quoteText: "", authorName: "", id: "" });
         } catch (error) {
           console.error("Error creating/updating quote:", error.message);
@@ -67,7 +73,7 @@ const Quote = () => {
         // Handle further submission logic here
       }
     },
-    [formData, createQuote, updateQuote]
+    [formData, createQuote, updateQuote, setFormQuoteError, setError]
   );
 
   return (

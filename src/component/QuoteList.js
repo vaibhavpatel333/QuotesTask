@@ -18,7 +18,7 @@ export const QuoteList = ({
           {quoteList.length > 0 &&
             quoteList.map((item) => {
               return (
-                <div className="quote">
+                <div className="quote" key={item._id}>
                   <li>
                     <span className="quote-text">{`“${item.quoteText}“`}</span>{" "}
                     <span className="quote-author">{`- ${item.authorName}`}</span>

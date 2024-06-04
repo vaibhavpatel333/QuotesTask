@@ -79,7 +79,7 @@ const useQuoteApi = (url) => {
     fetchData(); // Fetch initial data when the component mounts
   }, [fetchData]);
 
-  return { data, loading, error, createQuote, updateQuote, deleteQuote, formQuoteError };
+  return { data, loading, error, createQuote, updateQuote, deleteQuote, formQuoteError, setError, setFormQuoteError };
 };
 
 export default useQuoteApi;
